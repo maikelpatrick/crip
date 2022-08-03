@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "criptoSaque": {
+      "home": {
+        "title": "Saques",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Saque",
+        "createOrEditLabel": "Criar ou editar Saque",
+        "notFound": "Nenhum Saque encontrado"
+      },
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Saque {{ id }}?"
+      },
+      "detail": {
+        "title": "Saque"
+      },
+      "id": "ID",
+      "volume": "Volume",
+      "client_account": "Client Account",
+      "entidade_account": "Entidade Account"
+    }
+  },
+  "criptoApp": {
+    "criptoSaque": {
+      "created": "Um novo Saque foi criado com o identificador {{ param }}",
+      "updated": "Um Saque foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Saque foi excluído com o identificador {{ param }}"
+    }
+  }
+}

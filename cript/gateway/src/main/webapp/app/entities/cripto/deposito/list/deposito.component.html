@@ -1,0 +1,84 @@
+<div>
+  <h2 id="page-heading" data-cy="DepositoHeading">
+    <span jhiTranslate="gatewayApp.criptoDeposito.home.title">Depositos</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="gatewayApp.criptoDeposito.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-deposito"
+        [routerLink]="['/deposito/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.criptoDeposito.home.createLabel"> Create a new Deposito </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="depositos?.length === 0">
+    <span jhiTranslate="gatewayApp.criptoDeposito.home.notFound">No depositos found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="depositos && depositos.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="gatewayApp.criptoDeposito.volume">Volume</span></th>
+          <th scope="col"><span jhiTranslate="gatewayApp.criptoDeposito.id_deposito">Id Deposito</span></th>
+          <th scope="col"><span jhiTranslate="gatewayApp.criptoDeposito.client_account">Client Account</span></th>
+          <th scope="col"><span jhiTranslate="gatewayApp.criptoDeposito.entidade_account">Entidade Account</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let deposito of depositos; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/deposito', deposito.id, 'view']">{{ deposito.id }}</a>
+          </td>
+          <td>{{ deposito.volume }}</td>
+          <td>{{ deposito.id_deposito }}</td>
+          <td>{{ deposito.client_account }}</td>
+          <td>{{ deposito.entidade_account }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/deposito', deposito.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/deposito', deposito.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(deposito)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+{
+  "changelogDate": "20220731170428",
+  "clientRootFolder": "cripto",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "volume",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "id_deposito",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "client_account",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entidade_account",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "cripto",
+  "name": "Deposito",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

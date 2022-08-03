@@ -1,0 +1,27 @@
+{
+  "changelogDate": "20220731225715",
+  "clientRootFolder": "cripto",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "volume",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "client_account",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entidade_account",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "cripto",
+  "name": "Saque",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

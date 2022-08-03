@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "criptoSaque": {
+      "home": {
+        "title": "Saques",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Saque",
+        "createOrEditLabel": "Create or edit a Saque",
+        "notFound": "No Saques found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Saque {{ id }}?"
+      },
+      "detail": {
+        "title": "Saque"
+      },
+      "id": "ID",
+      "volume": "Volume",
+      "client_account": "Client Account",
+      "entidade_account": "Entidade Account"
+    }
+  },
+  "criptoApp": {
+    "criptoSaque": {
+      "created": "A new Saque is created with identifier {{ param }}",
+      "updated": "A Saque is updated with identifier {{ param }}",
+      "deleted": "A Saque is deleted with identifier {{ param }}"
+    }
+  }
+}

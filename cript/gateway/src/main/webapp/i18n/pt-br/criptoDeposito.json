@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "criptoDeposito": {
+      "home": {
+        "title": "Depositos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Deposito",
+        "createOrEditLabel": "Criar ou editar Deposito",
+        "notFound": "Nenhum Deposito encontrado"
+      },
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Deposito {{ id }}?"
+      },
+      "detail": {
+        "title": "Deposito"
+      },
+      "id": "ID",
+      "volume": "Volume",
+      "id_deposito": "Id Deposito",
+      "client_account": "Client Account",
+      "entidade_account": "Entidade Account"
+    }
+  },
+  "criptoApp": {
+    "criptoDeposito": {
+      "created": "Um novo Deposito foi criado com o identificador {{ param }}",
+      "updated": "Um Deposito foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Deposito foi excluído com o identificador {{ param }}"
+    }
+  }
+}

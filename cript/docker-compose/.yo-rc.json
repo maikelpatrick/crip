@@ -1,0 +1,11 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["cripto", "gateway"],
+    "clusteredDbApps": {},
+    "directoryPath": "../",
+    "gatewayType": "SpringCloudGateway",
+    "jwtSecretKey": "MWY3OGVlNzhmYzY5NzJkNTIwNTdjYzM3YzAxNTc2MTIzMDhkODgzOTllYzk1NzYxNGFjOWFjY2RhZWExOGQ5NGZjNDU2YzEyNDhhMTdhZWEzY2Y0NmE4ZDlkYmU3NTQ4MGFiZg==",
+    "monitoring": "no",
+    "serviceDiscoveryType": "eureka"
+  }
+}
